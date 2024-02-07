@@ -10,6 +10,8 @@ namespace CoffeeProject
             session.SetString(key, JsonSerializer.Serialize(value));
         }
 
+
+
         public static T GetObjectFromJson<T>(this ISession session, string key)
         {
             var value = session.GetString(key);
