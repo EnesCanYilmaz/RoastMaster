@@ -1,7 +1,7 @@
 ﻿using System;
-using CoffeeProject.Entities.Identity;
+using RoastMaster.Entities.Identity;
 
-namespace CoffeeProject.Models
+namespace RoastMaster.Models
 {
     public class CreatePaymentCardModel
     {

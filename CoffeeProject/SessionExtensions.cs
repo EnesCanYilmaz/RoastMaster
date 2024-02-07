@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text.Json;
 
-namespace CoffeeProject
+namespace RoastMaster
 {
     public static class SessionExtensions
     {

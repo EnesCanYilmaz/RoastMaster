@@ -1,9 +1,9 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using CoffeeProject.Entities.Identity;
+using RoastMaster.Entities.Identity;
 
-namespace CoffeeProject.Entities
+namespace RoastMaster.Entities
 {
     public class PaymentCard
     {

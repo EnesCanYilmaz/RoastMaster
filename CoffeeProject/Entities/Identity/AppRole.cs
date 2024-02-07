@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.AspNetCore.Identity;
 
-namespace CoffeeProject.Entities.Identity
+namespace RoastMaster.Entities.Identity
 {
 	public class AppRole : IdentityRole
 	{

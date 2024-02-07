@@ -1,8 +1,8 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
-using CoffeeProject.Contexts;
-using CoffeeProject.Entities;
-using CoffeeProject.Models; // Coffee model sınıfının doğru namespace'e sahip olduğundan emin olun
+using RoastMaster.Contexts;
+using RoastMaster.Entities;
+using RoastMaster.Models; // Coffee model sınıfının doğru namespace'e sahip olduğundan emin olun
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -10,10 +10,10 @@ using Microsoft.EntityFrameworkCore;
 [Authorize(Roles = "Admin")]
 public class CoffeeController : Controller
 {
-    private readonly CoffeeProjectDbContext _dbContext;
+    private readonly RoastMasterDbContext _dbContext;
     private readonly IWebHostEnvironment _webHostEnvironment;
 
-    public CoffeeController(CoffeeProjectDbContext dbContext, IWebHostEnvironment webHostEnvironment)
+    public CoffeeController(RoastMasterDbContext dbContext, IWebHostEnvironment webHostEnvironment)
     {
         _dbContext = dbContext;
         _webHostEnvironment = webHostEnvironment;

@@ -1,4 +1,4 @@
-﻿using CoffeeProject.Contexts;
+﻿using RoastMaster.Contexts;
 
 var builder = WebApplication.CreateBuilder(args);
 

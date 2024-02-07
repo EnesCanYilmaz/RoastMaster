@@ -1,5 +1,5 @@
 ﻿using System;
-namespace CoffeeProject.Entities
+namespace RoastMaster.Entities
 {
 	public class CartLine
 	{

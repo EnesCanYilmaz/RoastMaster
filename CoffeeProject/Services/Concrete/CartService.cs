@@ -1,8 +1,8 @@
 ﻿using System;
-using CoffeeProject.Entities;
+using RoastMaster.Entities;
 using Microsoft.AspNetCore.Cors.Infrastructure;
 
-namespace CoffeeProject.Services
+namespace RoastMaster.Services
 {
     public class CartService : ICartService
     {

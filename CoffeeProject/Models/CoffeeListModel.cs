@@ -1,7 +1,7 @@
 ﻿using System;
-using CoffeeProject.Entities;
+using RoastMaster.Entities;
 
-namespace CoffeeProject.Models
+namespace RoastMaster.Models
 {
     public class CoffeeModel
     {

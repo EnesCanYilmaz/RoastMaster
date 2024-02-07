@@ -1,15 +1,15 @@
 ﻿using System;
-using CoffeeProject.Entities;
-using CoffeeProject.Entities.Identity;
+using RoastMaster.Entities;
+using RoastMaster.Entities.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace CoffeeProject.Contexts
+namespace RoastMaster.Contexts
 {
-	public class CoffeeProjectDbContext : IdentityDbContext<AppUser, AppRole, string>
+	public class RoastMasterDbContext : IdentityDbContext<AppUser, AppRole, string>
     {
 
-        public CoffeeProjectDbContext(DbContextOptions options) : base(options)
+        public RoastMasterDbContext(DbContextOptions options) : base(options)
         {
 
         }

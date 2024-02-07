@@ -2,21 +2,21 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using CoffeeProject.Contexts;
-using CoffeeProject.Entities;
-using CoffeeProject.Entities.Identity;
-using CoffeeProject.Models;
+using RoastMaster.Entities;
+using RoastMaster.Entities.Identity;
+using RoastMaster.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using RoastMaster.Contexts;
 
-namespace CoffeeProject.Controllers
+namespace RoastMaster.Controllers
 {
     public class PaymentController : Controller
     {
         private readonly UserManager<AppUser> _userManager;
-        private readonly CoffeeProjectDbContext _dbContext;
+        private readonly RoastMasterDbContext _dbContext;
 
-        public PaymentController(UserManager<AppUser> userManager, CoffeeProjectDbContext dbContext)
+        public PaymentController(UserManager<AppUser> userManager, RoastMasterDbContext dbContext)
         {
             _userManager = userManager;
             _dbContext = dbContext;

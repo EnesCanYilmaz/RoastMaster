@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace CoffeeProject.Models
+namespace RoastMaster.Models
 {
 	public class LoginViewModel
 	{

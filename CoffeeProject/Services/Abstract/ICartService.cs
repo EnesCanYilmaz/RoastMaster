@@ -1,6 +1,6 @@
-﻿using CoffeeProject.Entities;
+﻿using RoastMaster.Entities;
 
-namespace CoffeeProject.Services
+namespace RoastMaster.Services
 {
     public interface ICartService
     {

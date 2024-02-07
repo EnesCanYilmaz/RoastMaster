@@ -2,13 +2,13 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 
-namespace CoffeeProject.Contexts
+namespace RoastMaster.Contexts
 {
-    public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<CoffeeProjectDbContext>
+    public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<RoastMasterDbContext>
     {
-        public CoffeeProjectDbContext CreateDbContext(string[] args)
+        public RoastMasterDbContext CreateDbContext(string[] args)
         {
-            DbContextOptionsBuilder<CoffeeProjectDbContext> dbContextOptionsBuilder = new();
+            DbContextOptionsBuilder<RoastMasterDbContext> dbContextOptionsBuilder = new();
             dbContextOptionsBuilder.UseSqlServer(Configuration.ConnectionString);
             return new(dbContextOptionsBuilder.Options);
         }

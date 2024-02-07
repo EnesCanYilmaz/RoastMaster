@@ -1,5 +1,5 @@
 ﻿using System;
-namespace CoffeeProject.Contexts
+namespace RoastMaster.Contexts
 {
 	static class Configuration
 	{

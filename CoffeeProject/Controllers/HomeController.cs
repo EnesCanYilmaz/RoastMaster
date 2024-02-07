@@ -1,18 +1,18 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using CoffeeProject.Models;
+using RoastMaster.Models;
 using Microsoft.EntityFrameworkCore;
-using CoffeeProject.Contexts;
-using CoffeeProject.Services;
+using RoastMaster.Contexts;
+using RoastMaster.Services;
 using System.ComponentModel;
 
-namespace CoffeeProject.Controllers;
+namespace RoastMaster.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly CoffeeProjectDbContext _dbContext;
+    private readonly RoastMasterDbContext _dbContext;
     private readonly ICartSessionService _cartSessionService;
-    public HomeController(CoffeeProjectDbContext dbContext, ICartSessionService cartSessionService)
+    public HomeController(RoastMasterDbContext dbContext, ICartSessionService cartSessionService)
     {
         _dbContext = dbContext;
         _cartSessionService = cartSessionService;

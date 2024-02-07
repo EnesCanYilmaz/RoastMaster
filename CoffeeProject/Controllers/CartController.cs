@@ -2,22 +2,22 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using CoffeeProject.Contexts;
-using CoffeeProject.Entities;
-using CoffeeProject.Models;
-using CoffeeProject.Services;
+using RoastMaster.Contexts;
+using RoastMaster.Entities;
+using RoastMaster.Models;
+using RoastMaster.Services;
 using Microsoft.AspNetCore.Mvc;
 
 
-namespace CoffeeProject.Controllers
+namespace RoastMaster.Controllers
 {
     public class CartController : Controller
     {
         private readonly ICartSessionService _cartSessionService;
         private readonly ICartService _cartService;
-        private readonly CoffeeProjectDbContext _dbContext;
+        private readonly RoastMasterDbContext _dbContext;
 
-        public CartController(ICartSessionService cartSessionService, ICartService cartService, CoffeeProjectDbContext dbContext)
+        public CartController(ICartSessionService cartSessionService, ICartService cartService, RoastMasterDbContext dbContext)
         {
             _cartSessionService = cartSessionService;
             _cartService = cartService;

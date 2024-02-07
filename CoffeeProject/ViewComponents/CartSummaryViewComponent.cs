@@ -1,10 +1,10 @@
 ﻿using System;
-using CoffeeProject.Models;
-using CoffeeProject.Services;
+using RoastMaster.Models;
+using RoastMaster.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ViewComponents;
 
-namespace CoffeeProject.ViewComponents
+namespace RoastMaster.ViewComponents
 {
 	public class CartSummaryViewComponent : ViewComponent
     {

@@ -1,9 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using CoffeeProject.Entities.Identity;
 using Microsoft.EntityFrameworkCore;
+using RoastMaster.Entities.Identity;
 
-namespace CoffeeProject.Entities
+namespace RoastMaster.Entities
 {
     public class Order
     {
@@ -17,6 +17,5 @@ namespace CoffeeProject.Entities
         public Coffee Coffee { get; set; }
         public AppUser AppUser { get; set; }
     }
-
 }
 

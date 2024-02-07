@@ -1,5 +1,5 @@
 ﻿using System;
-namespace CoffeeProject.Models
+namespace RoastMaster.Models
 {
 	public class PaymentCardListModel
 	{

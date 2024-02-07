@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using CoffeeProject.Entities.Identity;
-using CoffeeProject.Models;
+using RoastMaster.Entities.Identity;
+using RoastMaster.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 
-namespace CoffeeProject.Controllers
+namespace RoastMaster.Controllers
 {
     public class AuthController : Controller
     {

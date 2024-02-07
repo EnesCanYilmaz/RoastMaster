@@ -1,17 +1,18 @@
 ﻿using System;
-using CoffeeProject.Entities.Identity;
-using CoffeeProject.Services;
+using RoastMaster.Entities.Identity;
+using RoastMaster.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using RoastMaster.Contexts;
 
-namespace CoffeeProject.Contexts
+namespace RoastMaster.Contexts
 {
 
     public static class ServiceRegistration
     {
         public static void AddPersistenceServices(this IServiceCollection services)
         {
-            services.AddDbContext<CoffeeProjectDbContext>(options => options.UseSqlServer(Configuration.ConnectionString));
+            services.AddDbContext<RoastMasterDbContext>(options => options.UseSqlServer(Configuration.ConnectionString));
             services.AddScoped<ICartService, CartService>();
             services.AddScoped<ICartSessionService, CartSessionService>();
 
@@ -23,7 +24,7 @@ namespace CoffeeProject.Contexts
                 options.Password.RequireLowercase = false;
                 options.Password.RequireUppercase = false;
                 options.Password.RequireUppercase = false;
-            }).AddEntityFrameworkStores<CoffeeProjectDbContext>();
+            }).AddEntityFrameworkStores<RoastMasterDbContext>();
 
             using (var serviceProvider = services.BuildServiceProvider())
             {
