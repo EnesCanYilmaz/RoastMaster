@@ -1,0 +1,53 @@
+﻿@model CoffeeProject.Models.CartListViewModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Your Cart</h2>
+<table class="table">
+    <tr>
+        <td>Coffee</td>
+        <td>Price</td>
+        <td>Quantity</td>
+        <td></td>
+    </tr>
+    @foreach (var item in Model.Cart.CartLines)
+    {
+        <tr>
+            <td>@item.Coffee.Name</td>
+            <td>@item.Coffee.Price</td>
+            <td>@item.Quantity</td>
+            <td class="text-right"><a class="btn btn-xs btn-danger" asp-controller="Cart" asp-action="Remove" asp-route-coffeeId="@item.Coffee.Id"><span class="glyphicon glyphicon-remove"></span> remove from cart</a></td>
+        </tr>
+    }
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+            <h3>Total</h3>
+        </td>
+        <td class="text-right">
+            <h3>
+                <strong>@Model.Cart.Total</strong>
+            </h3>
+        </td>
+    </tr>
+    <tr>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td>
+            <a asp-controller="Home" asp-action="Index" class="btn btn-xs btn-default">
+                <span class="glyphicon glyphicon-shopping-cart"></span> Continue Shopping
+            </a>
+        </td>
+        <td class="text-right">
+            <a asp-controller="Order" asp-action="Complete" class="btn btn-xs btn-success">
+                <span class="glyphicon glyphicon-shopping-play"></span> Go To Checkout
+            </a>
+        </td>
+    </tr>
+</table>

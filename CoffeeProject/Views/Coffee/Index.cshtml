@@ -1,0 +1,41 @@
+﻿@model List<CoffeeModel>
+
+<h2>Coffee Types</h2>
+
+<p>
+    @Html.ActionLink("Add New Coffee Type", "Create")
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var coffeeType in Model)
+        {
+            <tr>
+                <td>@coffeeType.Name</td>
+                <td>@coffeeType.Description</td>
+                <td>@coffeeType.Price</td>
+                <td>
+                    <button class="btn btn-success">
+                        @Html.ActionLink("Edit", "Edit", new { id = coffeeType.Id }) 
+                    </button>
+                </td>
+                <td>
+                    <form method="post" action="@Url.Action("Delete", "Coffee")">
+                        @Html.AntiForgeryToken()
+                        @Html.Hidden("id", coffeeType.Id)
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

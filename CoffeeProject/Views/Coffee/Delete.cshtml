@@ -1,0 +1,12 @@
+﻿@model CoffeeDeleteModel
+
+<h2>Delete Coffee Type</h2>
+
+<p>Are you sure you want to delete the following coffee type?</p>
+
+@using (Html.BeginForm("Delete", "Coffee", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(model => model.Id)
+    <input type="submit" value="Delete" class="btn btn-danger" />
+}

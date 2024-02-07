@@ -1,0 +1,34 @@
+﻿@model CreatePaymentCardModel
+
+<h2>Add New Payment Card</h2>
+
+@using (Html.BeginForm("Create", "Payment", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        @Html.LabelFor(model => model.CardName)
+        @Html.TextBoxFor(model => model.CardName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.CardName)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.CardNumber)
+        @Html.TextBoxFor(model => model.CardNumber, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.CardNumber)
+    </div>
+
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.ExpiryDate)
+        @Html.TextBoxFor(model => model.ExpiryDate, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.ExpiryDate)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.SecurityCode)
+        @Html.TextBoxFor(model => model.SecurityCode, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.SecurityCode)
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add Card</button>
+}

@@ -1,0 +1,53 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
+  <ItemGroup>
+    <None Remove="Entities\" />
+    <None Remove="Contexts\" />
+    <None Remove="Views\Coffee\" />
+    <None Remove="Entities\Identity\" />
+    <None Remove="Views\Auth\" />
+    <None Remove="ViewComponents\" />
+    <None Remove="Services\" />
+    <None Remove="Views\Cart\" />
+    <None Remove="Views\Shared\Components\" />
+    <None Remove="Views\Shared\Components\CartSummary\" />
+    <None Remove="Views\Payment\" />
+    <None Remove="Services\Abstract\" />
+    <None Remove="Services\Concrete\" />
+    <None Remove="Views\Order\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entities\" />
+    <Folder Include="Contexts\" />
+    <Folder Include="Views\Coffee\" />
+    <Folder Include="Entities\Identity\" />
+    <Folder Include="Views\Auth\" />
+    <Folder Include="ViewComponents\" />
+    <Folder Include="Services\" />
+    <Folder Include="Views\Cart\" />
+    <Folder Include="Views\Shared\Components\" />
+    <Folder Include="Views\Shared\Components\CartSummary\" />
+    <Folder Include="Views\Payment\" />
+    <Folder Include="Services\Abstract\" />
+    <Folder Include="Services\Concrete\" />
+    <Folder Include="Views\Order\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.8" />
+    <PackageReference Include="System.Diagnostics.Tools" Version="4.3.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.8">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.8" />
+  </ItemGroup>
+</Project>
